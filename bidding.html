@@ -56,50 +56,82 @@
         </div>
       </div>
        -->
-       <div class="container-fluid my-2 px-2">
-        <div class="row row-cols-2 g-2">
-          <!-- First Item -->
-          <div class="col">
-            <div class="card gallery-item">
-              <img src="https://via.placeholder.com/300" class="card-img-top gallery-img" alt="Image 1">
-              <div class="card-body text-center">
-                <h5 class="card-title">Image 1</h5>
-                <a href="#" class="btn btn-primary">View More</a>
-              </div>
+            <div class="container-fluid my-2 px-2">
+                <div class="row row-cols-1 g-2">
+                    <!-- First Item -->
+                    <div class="col">
+                        <div class="card gallery-item d-flex flex-row">
+                            <span class="status"></span>
+                            <img src="/assets/img/1.jpg" class="card-img-top gallery-img" alt="Image 1">
+                            <div class="card-body">
+                                <h6 class="card-title mb-2">Neclace - <small>1</small></h6>
+                                <p>
+                                    <small class="text-muted">Current Bid</small><br>
+                                    <small>AED</small><strong class="h5"> 3,433</strong>
+                                </p>
+                                <div class="d-flex justify-content-end">
+                                    <button data-bs-toggle="modal" data-bs-target="#bidModal"
+                                        class="btn goldrose-btn">Place Bid</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Item -->
+                    <div class="col">
+                        <div class="card gallery-item d-flex flex-row">
+                            <span class="status"></span>
+                            <img src="/assets/img/2.jpg" class="card-img-top gallery-img" alt="Image 1">
+                            <div class="card-body">
+                                <h6 class="card-title mb-2">Neclace - <small>2</small></h6>
+                                <p>
+                                    <small class="text-muted">Current Bid</small><br>
+                                    <small>AED</small><strong class="h5"> 3,433</strong>
+                                </p>
+                                <div class="d-flex justify-content-end">
+                                    <button data-bs-toggle="modal" data-bs-target="#bidModal"
+                                        class="btn goldrose-btn">Place Bid</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third Item -->
+                    <div class="col">
+                        <div class="card gallery-item d-flex flex-row">
+                            <span class="status"></span>
+                            <img src="/assets/img/3.jpg" class="card-img-top gallery-img" alt="Image 1">
+                            <div class="card-body">
+                                <h6 class="card-title mb-2">Neclace - <small>3</small></h6>
+                                <p>
+                                    <small class="text-muted">Current Bid</small><br>
+                                    <small>AED</small><strong class="h5"> 3,433</strong>
+                                </p>
+                                <div class="d-flex justify-content-end">
+                                    <button data-bs-toggle="modal" data-bs-target="#bidModal"
+                                        class="btn goldrose-btn">Place Bid</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fourth Item -->
+                    <div class="col">
+                        <div class="card gallery-item d-flex flex-row">
+                            <span class="status"></span>
+                            <img src="/assets/img/4.jpg" class="card-img-top gallery-img" alt="Image 1">
+                            <div class="card-body">
+                                <h6 class="card-title mb-2">Neclace - <small>4</small></h6>
+                                <p>
+                                    <small class="text-muted">Current Bid</small><br>
+                                    <small>AED</small><strong class="h5"> 3,433</strong>
+                                </p>
+                                <div class="d-flex justify-content-end">
+                                    <button data-bs-toggle="modal" data-bs-target="#bidModal"
+                                        class="btn goldrose-btn">Place Bid</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- Second Item -->
-          <div class="col">
-            <div class="card gallery-item">
-              <img src="https://via.placeholder.com/300" class="card-img-top gallery-img" alt="Image 2">
-              <div class="card-body text-center">
-                <h5 class="card-title">Image 2</h5>
-                <a href="#" class="btn btn-primary">View More</a>
-              </div>
-            </div>
-          </div>
-          <!-- Third Item -->
-          <div class="col">
-            <div class="card gallery-item">
-              <img src="https://via.placeholder.com/300" class="card-img-top gallery-img" alt="Image 3">
-              <div class="card-body text-center">
-                <h5 class="card-title">Image 3</h5>
-                <a href="#" class="btn btn-primary">View More</a>
-              </div>
-            </div>
-          </div>
-          <!-- Fourth Item -->
-          <div class="col">
-            <div class="card gallery-item">
-              <img src="https://via.placeholder.com/300" class="card-img-top gallery-img" alt="Image 4">
-              <div class="card-body text-center">
-                <h5 class="card-title">Image 4</h5>
-                <a href="#" class="btn btn-primary">View More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
             <div class="row g-4">
 
@@ -509,5 +541,42 @@
                 }
             }
         </script>
+
+        <!-- Modal Structure -->
+        <div class="modal fade" id="bidModal" tabindex="-1" aria-labelledby="bidModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bidModalLabel">Place Your Bid</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Full-Width Image -->
+                        <img src="/assets/img/4.jpg" alt="Bid Image" class="img-fluid w-100 mb-3">
+
+                        <!-- Bid Options -->
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div class="text-success">
+                                    <h6 class="my-0">Highest Bid</h6>
+                                </div><span class="text-success" id="highestBid"><small>AED</small>3,454</span>
+                            </li>
+                        </ul>
+                        <form class="card p-2 d-flex" id="myForm">
+                            <div class="input-group" style="margin-bottom:5px">
+                                <input type="number" class="form-control" id="bidAmount" step="100" value="100"
+                                    placeholder="Your Bid">
+                                <button class="btn btn-outline-secondary" type="button" id="increment100">+100</button>
+                                <button class="btn btn-outline-secondary" type="button" id="increment500">+500</button>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn goldrose-btn" id="bidSubmit">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
 </html>
