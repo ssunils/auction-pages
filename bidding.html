@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Harvest Festival 2023">
+    <meta name="author" content="Jackson Christopher">
+    <title>Harvest Festival 2024</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/dist/css/lightbox.min.css">
+    <script src="assets/js/lightbox.min.js"></script>
+    <style>
+        .container {
+            max-width: 960px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/sunil-style.css">
+    <script src="assets/js/sunil-script.js"></script>
+</head>
+
+<body class="bg-body-tertiary">
+    <div class="container-fluid">
+        <div class="row">
+
+            <header class="bid-header">
+
+                <small class="text-muted">Welcome to Harvest Festival 2024</small>
+                <h4 class="mb-0 p-0">
+                    <strong> Sunil Soundarapandian</strong>
+                </h4>
+                <small><span class="text-muted">Mobile:</span> 0585884950</small>
+                <a href="#" class="btn btn-link btn-sm">Edit</a>
+            </header>
+
+            <!-- 
+      <div class="row py-2">
+        <div class="col-md-12 col-lg-12">
+          <h4 class="mb-3">Bidder Details</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="memberNameLabel">Member Name</span>
+                <input type="text" class="form-control" id="memberName" aria-label="" aria-describedby="memberNameLabel" placeholder="">
+              </div>
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="memberMobileLabel">Mobile Number</span>
+                  <input type="text" class="form-control" id="memberMobile" aria-label="" aria-describedby="memberMobileLabel" placeholder="" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" onblur="validateMobile(this)">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+       -->
+       <div class="container-fluid my-2 px-2">
+        <div class="row row-cols-2 g-2">
+          <!-- First Item -->
+          <div class="col">
+            <div class="card gallery-item">
+              <img src="https://via.placeholder.com/300" class="card-img-top gallery-img" alt="Image 1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Image 1</h5>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Second Item -->
+          <div class="col">
+            <div class="card gallery-item">
+              <img src="https://via.placeholder.com/300" class="card-img-top gallery-img" alt="Image 2">
+              <div class="card-body text-center">
+                <h5 class="card-title">Image 2</h5>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Third Item -->
+          <div class="col">
+            <div class="card gallery-item">
+              <img src="https://via.placeholder.com/300" class="card-img-top gallery-img" alt="Image 3">
+              <div class="card-body text-center">
+                <h5 class="card-title">Image 3</h5>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Fourth Item -->
+          <div class="col">
+            <div class="card gallery-item">
+              <img src="https://via.placeholder.com/300" class="card-img-top gallery-img" alt="Image 4">
+              <div class="card-body text-center">
+                <h5 class="card-title">Image 4</h5>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <div class="row g-4">
+
+                <!-- Current Bidding Status -->
+                <!-- 
+        <div class="accordion accordion-flush" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Open for Bidding
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body table-responsive">
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th>Item ID</th>
+                      <th>Status</th>
+                      <th>Highest Bid</th>
+                    </tr>
+                  </thead>
+                  <tbody id="bidMaster-table-body">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+         -->
+                <!-- End Current Bidding Status -->
+
+                <div class="col-md-7 col-lg-8" id="itemCard" style="display: none;">
+                    <h4 class="mb-3">Item Details</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <div class="card mb-3">
+                                    <div class="row">
+                                        <div class="col-md-4"><a href="" data-lightbox="image-group" id="imageURL"><img
+                                                    src="" class="img-fluid rounded-start" alt="" id="image"></a></div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title" id="item"></h5>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item" id="sponsor"></li>
+                                                    <li class="list-group-item" id="weight"></li>
+                                                    <li class="list-group-item" id="status"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5 col-lg-4 order-sm-last" id="bidDetailsDiv" style="display: none;">
+                    <h4 class="mb-3">Bid Details</h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div class="text-success">
+                                <h6 class="my-0">Highest Bid</h6><small>AED</small>
+                            </div><span class="text-success" id="highestBid"></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Increment</h6><small class="text-body-secondary">AED</small>
+                            </div><span class="text-body-secondary" id="increment"></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Reserve Value</h6><small class="text-body-secondary">AED</small>
+                            </div><span class="text-body-secondary" id="reserve"></span>
+                        </li>
+                    </ul>
+                    <form class="card p-2" id="myForm">
+                        <div class="input-group" style="margin-bottom:5px">
+                            <input type="number" class="form-control" id="bidAmount" step="100" value="100"
+                                placeholder="Your Bid">
+                            <button class="btn btn-outline-secondary" type="button" id="increment100">+100</button>
+                            <button class="btn btn-outline-secondary" type="button" id="increment500">+500</button>
+                        </div>
+                        <div class="input-group"><button type="submit" class="btn btn-secondary btn-sm"
+                                id="bidSubmit">Submit</button></div>
+                    </form>
+                </div>
+            </div>
+            <div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 11">
+                <div id="toastContainer"></div>
+            </div>
+            <footer id="itemDetailsView" class="my-5 pt-5 text-body-secondary text-center text-small">
+                <p class="mb-1">Harvest Festival 2024</p>
+            </footer>
+        </div>
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                fetchMasterBiddingInfo();
+            });
+            var jsonData = [{ "itemID": "1", "item": "Necklace", "image": "", "sponsor": "Qusais A", "weight": "24.91", "purchasePrice": "6550", "reserve": "7200", "increment": "100", "highestBid": "0", "memberDetail": "", "status": "Open", "description": "" }];
+            var selectedID;
+            // Validate and enforce rules for bid input
+            const memberName = document.getElementById("memberName");
+            const memberMobile = document.getElementById("memberMobile");
+            const submitButton = document.getElementById("bidSubmit");
+            memberName.addEventListener("input", validateBid);
+            memberMobile.addEventListener("input", validateBid);
+            bidAmount.addEventListener("input", validateBid);
+
+            // fetch and fill
+            function fetchItemDetails() {
+                var itemCard = document.getElementById("itemCard");
+
+                //   REMOVE THE ABOVE DEMO DATA AND UNCOMMENT THE BELOW CODE TO FETCH DATA FROM SERVER
+                const demoDetail = { "highestBid": "0", "increment": "100", "reserve": "7200", "description": "", "status": "Open", "sponsor": "Qusais A", "weight": "24.91", "item": "Necklace", "image": "" };
+                setDetailSection(demoDetail);
+
+                //   REMOVE THE ABOVE DEMO DATA AND UNCOMMENT THE BELOW CODE TO FETCH DATA FROM SERVER
+
+                if (validateBid("selectItem")) {
+                    showToast('Enter your Name and Mobile number to start bidding!')
+                    return
+                }
+                if (selectedID) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET", "get_item_details.php?itemID=" + selectedID, true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            var itemDetails = JSON.parse(xhr.responseText);
+                            setDetailSection(itemDetails);
+                        }
+                    };
+                    xhr.send();
+                } else {
+                    itemCard.style.display = "none";
+                    bidDetailsDiv.style.display = "none";
+                }
+            }
+
+            function setDetailSection(itemDetails) {
+                document.getElementById("highestBid").textContent = itemDetails.highestBid;
+                document.getElementById("increment").textContent = itemDetails.increment;
+                document.getElementById("reserve").textContent = itemDetails.reserve;
+                document.getElementById("item").textContent = selectedID + " - " + itemDetails.item;
+                document.getElementById("sponsor").textContent = "Sponsor: " + itemDetails.sponsor;
+                document.getElementById("weight").textContent = "Weight: " + itemDetails.weight;
+                document.getElementById("status").textContent = "Status: " + itemDetails.status;
+                var bidAmountElement = document.getElementById("bidAmount");
+                if (Number(itemDetails.highestBid) > Number(itemDetails.reserve)) {
+                    // If highestBid is greater than reserve, add 100 to highestBid and set it as the bidAmount value
+                    bidAmountElement.value = Number(itemDetails.highestBid) + 100;
+                } else {
+                    // If reserve is greater than or equal to highestBid, set bidAmount value to the reserve
+                    bidAmountElement.value = Number(itemDetails.reserve);
+                }
+                submitButton.disabled = false;
+                var imageURL = document.getElementById("imageURL");
+                imageURL.href = itemDetails.image;
+                var image = document.getElementById("image");
+                image.src = itemDetails.image;
+                image.alt = itemDetails.item;
+                itemCard.style.display = "block";
+                bidDetailsDiv.style.display = "block";
+            }
+
+            // fetch and fill
+            function fetchMasterBiddingInfo() {
+                const testData = [{ "highestBid": "0", "memberDetail": "", "status": "Open", "itemId": "1", "item": "Necklace" }];
+                processData(testData);
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "get_master_data.php", true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var itemDetails = JSON.parse(xhr.responseText);
+                        processData(itemDetails);
+                    }
+                };
+                xhr.send();
+            }
+
+            function processData(itemDetails) {
+                const tableBody = document.getElementById('bidMaster-table-body');
+                tableBody.innerHTML = "";
+                itemDetails.forEach(item => {
+                    if (selectedID && selectedID === item.itemId) {
+                        if (document.getElementById("highestBid"))
+                            document.getElementById("highestBid").textContent = item.highestBid;
+                    }
+                    const row = document.createElement('tr');
+                    let itemDetail = {
+                        ...item,
+                        item: `${item.itemId} - ${item.item}`,
+                    }
+                    const columns = ['item', 'status', 'highestBid'];
+                    columns.forEach(column => {
+                        const cell = document.createElement('td');
+                        cell.textContent = itemDetail[column];
+                        if (column === 'item') {
+                            cell.innerHTML = `<button class="btn btn-secondary btn-sm btn-auto selectButton">${itemDetail[column]} </button>`
+                            cell.onclick = () => {
+                                selectedID = itemDetail['itemId']
+                                window.scrollTo({
+                                    top: document.body.scrollHeight,
+                                    behavior: 'smooth' // Use 'auto' for instant scroll
+                                });
+                                fetchItemDetails(selectedID)
+                            }
+                        }
+                        row.appendChild(cell);
+                    });
+                    tableBody.appendChild(row);
+                });
+            }
+
+            // member details cookie
+            function setCookie(name, value) {
+                document.cookie = `${name}=${value}`;
+            }
+
+            function getCookie(name) {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.startsWith(name + '=')) {
+                        return cookie.substring(name.length + 1);
+                    }
+                }
+                return null;
+            }
+
+            function loadFromCookies() {
+                const memberName = getCookie("memberName");
+                const memberMobile = getCookie("memberMobile");
+                if (memberName) {
+                    document.getElementById("memberName").value = memberName;
+                }
+                if (memberMobile) {
+                    document.getElementById("memberMobile").value = memberMobile;
+                }
+            }
+            loadFromCookies();
+
+            function handleInputChange(event) {
+                const inputId = event.target.id;
+                const inputValue = event.target.value;
+                setCookie(inputId, inputValue);
+            }
+            const inputFields = document.querySelectorAll("input[id^='member']");
+            inputFields.forEach((input) => {
+                input.addEventListener("input", handleInputChange);
+            });
+
+            function validateBid(from) {
+                const highestBid = parseInt(document.getElementById("highestBid").textContent);
+                const reserve = parseInt(document.getElementById("reserve").textContent);
+                const increment = parseInt(document.getElementById("increment").textContent);
+                const bidValue = parseInt(bidAmount.value);
+                const hasMemberName = memberName.value.trim() !== "";
+                const hasMemberMobile = mobilePattern.test(memberMobile.value);
+                if (from === 'selectItem') {
+                    if (
+                        (!(hasMemberName && hasMemberMobile))) {
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+                if (
+                    (!(hasMemberName && hasMemberMobile)) ||
+                    !bidAmount.value ||
+                    bidValue <= highestBid ||
+                    bidValue < reserve ||
+                    (bidValue - highestBid) % increment !== 0
+                ) {
+                    submitButton.disabled = true;
+
+                } else {
+                    submitButton.disabled = false;
+                }
+            }
+
+            // Function to handle the "bidSubmit" button click
+            document.getElementById("bidSubmit").addEventListener("click", async function () {
+                const itemID = selectedID
+                const memberName = document.getElementById("memberName").value;
+                const memberMobile = document.getElementById("memberMobile").value;
+                const bidAmount = document.getElementById("bidAmount").value;
+                let memberDetail = JSON.stringify({
+                    memberName: memberName,
+                    memberMobile: memberMobile
+                })
+                const bidData = {
+                    itemID: itemID,
+                    memberName: memberName,
+                    memberMobile: memberMobile,
+                    bidAmount: bidAmount,
+                    memberDetail
+                }
+
+                // Send the bid data to the server
+                return new Promise(function (resolve, reject) {
+                    const xhr = new XMLHttpRequest();
+                    xhr.open("POST", "process_bid.php", true);
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                    xhr.onreadystatechange = function () {
+                        // debugger
+                        if (xhr.readyState === 4) {
+                            if (xhr.status === 200) {
+                                var response = JSON.parse(xhr.responseText);
+                                if (response.success) {
+                                    fetchMasterBiddingInfo()
+                                    fetchItemDetails()
+                                    var bidNumber = response.bidNumber;
+                                    showToast("Bid submitted successfully. Bid Number: " + bidNumber, 'success')
+
+                                } else {
+                                    showToast("Error: " + response.message, "error");
+                                }
+                            } else {
+
+                            }
+                        }
+                    };
+                    // console.log(xhr)
+                    xhr.send(JSON.stringify(bidData));
+                });
+            });
+            setInterval(() => {
+                fetchMasterBiddingInfo()
+            }, 10000)
+
+            const form = document.getElementById('myForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+            });
+
+            // lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            });
+
+            // increment
+            document.getElementById('increment100').addEventListener('click', function () {
+                incrementValue(100);
+                validateBid()
+            });
+
+            document.getElementById('increment500').addEventListener('click', function () {
+                incrementValue(500);
+                validateBid()
+            });
+
+            function incrementValue(increment) {
+                const bidAmount = document.getElementById('bidAmount');
+                bidAmount.value = parseFloat(bidAmount.value) + increment;
+            }
+
+            function showToast(message, type) {
+                const toastContainer = document.getElementById('toastContainer');
+                const toast = document.createElement('div');
+                toast.classList.add('toast');
+                toast.innerHTML = `
+                <div class="toast-header ${type === 'success' ? "toastHeaderSuccess" : "toastHeaderError"}">
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+					<strong class="me-auto toastHeaderText" ><span>${type === 'success' ? "Success" : "Info"}</span></strong>
+                </div>
+                <div class="d-flex">
+                       <div class="toast-body">
+                       ${message}
+                         </div>
+                </div>
+               
+            `;
+                toastContainer.appendChild(toast);
+
+                // Initialize the toast using Bootstrap's JavaScript
+                const bsToast = new bootstrap.Toast(toast);
+                bsToast.show();
+
+                // Remove the toast after it is hidden
+                bsToast._element.addEventListener('hidden.bs.toast', function () {
+                    toast.remove();
+                });
+            }
+
+            // validate Mobile
+            const mobilePattern = /^05\d{8}$/; // 10-digit pattern starting with 05
+            let errorToast = null;
+            function validateMobile(input) {
+                const mobileValue = input.value;
+                if (!mobilePattern.test(mobileValue)) {
+                    // Remove the existing error toast if it's displayed
+                    if (errorToast) {
+                        errorToast.hide();
+                    }
+                    errorToast = showToast('Mobile number must be 10 digits and start with 05', 'error');
+                    submitButton.disabled = true;
+                } else {
+                    submitButton.disabled = false;
+                    // Remove the existing error toast if it's displayed
+                    if (errorToast) {
+                        errorToast.hide();
+                        errorToast = null;
+                    }
+                }
+            }
+        </script>
+
+</html>
